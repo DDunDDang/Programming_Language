@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <script>
+        // 변수를 선언합니다.
+        let output = ''
+        const size = 5
+
+        // 반복합니다.
+        for (let i = 1; i <= size; i++) {
+            let starCount = 0;
+            for (let j = 1; j <= size; j++) {
+                if (size - i >= j) {
+                    output += ' '
+                } else {
+                    output += "*"
+                    starCount += 1
+                }
+            }
+            for (let j = 1; j < starCount; j++) {
+                output += "*"
+            }
+            output += '\n'
+        }
+
+        for (let i = size - 1; i > 0; i--) {
+            let starCount = 0;
+            for (let j = 1; j <= size; j++) {
+                if (size - i >= j) {
+                    output += ' '
+                } else {
+                    output += "*"
+                    starCount += 1
+                }
+            }
+            for (let j = 1; j < starCount; j++) {
+                output += "*"
+            }
+            output += '\n'
+        }
+
+
+        // 출력합니다.
+        console.log(output)
+    </script>
+</body>
+</html>
