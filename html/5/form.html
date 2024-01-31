@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- autocomplete == 자동완성 on / off-->
+    <form action="" autocomplete=""></form>
+
+    <form action="">
+      <fieldset>
+        <legend>상품 선택</legend>
+      </fieldset>
+      <fieldset>
+        <legend>배송 정보</legend>
+      </fieldset>
+      <label for="user-id">아이디(6자 이상)</label>
+      <input type="text" id="user-id" />
+    </form>
+
+    <form>
+      <fieldset>
+        <label>아이디: <input type="text" id="user-id" size="10" /></label>
+        <label
+          >비밀번호: <input type="password" id="user-pw" size="10"
+        /></label>
+      </fieldset>
+    </form>
+
+    <ul>
+      <li>
+        <label for="user-name">이름</label>
+        <input type="text" id="user-name" />
+      </li>
+      <li>
+        <label for="addr">배송 주소</label>
+        <input type="text" id="addr" />
+      </li>
+      <li>
+        <label for="mail">이메일 주소</label>
+        <input type="text" id="mail" />
+      </li>
+      <li>
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone" />
+      </li>
+    </ul>
+
+    <fieldset>
+      <legend>상품 선택</legend>
+      <p><b>주문할 상품을 선택해 주세요.</b></p>
+      <label><input type="checkbox" value="s_3" />선물용 3kg</label>
+      <label><input type="checkbox" value="s_5" />선물용 5kg</label>
+      <label><input type="checkbox" value="f_3" />가정용 3kg</label>
+      <label><input type="checkbox" value="f_5" />가정용 5kg</label>
+      <p><b>포장 선택</b></p>
+      <label><input type="radio" name="gift" value="yes" />선물 포장</label>
+      <label><input type="radio" name="gift" value="no" />선물 포장 안함</label>
+    </fieldset>
+
+    <div id="container"">
+      <h1>회원 가입을 환영합니다</h1>
+      <form>
+        <fieldset>
+          <legend>사용자 정보</legend>
+          <ul>
+            <li>
+              <label for="uid">아이디</label>
+              <input type="text" id="uid">
+            </li>
+            <li>
+              <label for="umail">이메일</label>
+              <input type="email" id="umail">
+            </li>
+            <li>
+              <label for="pwd1">비밀번호</label>
+              <input type="password" id="pwd">
+            </li>
+            <li>
+              <label for="pwd2">비밀번호 확인</label>
+              <input type="password" id="pwd2">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>이벤트와 새로운 소식</legend>
+          <input type="radio" name="mailing" id="mailing_y">
+          <label for="mailing_y">메일 수신</label>
+          <input type="radio" name="mailing" id="mailing_n">
+          <label for="mailing_n">메일 수신 안함</label>
+        </fieldset>
+        <fieldset>
+          <div id="buttons">
+            <input type="submit" value="가입하기">
+            <input type="reset" value="취소">
+          </div>
+        </fieldset>
+        <ul>
+          <li>
+            <label><input type="checkbox" value="s_3">선물용 3kg</label>
+            <input type="number" min="0" max="5">개 (최대 5개)
+          </li>
+          <li>
+            <label><input type="checkbox" value="s_5">선물용 5kg</label>
+            <input type="number" min="0" max="3" value="1">개 (최대 3개)
+          </li>
+          <li>
+            <label><input type="checkbox" value="f_3">가정용 3kg</label>
+            <input type="range" min="0" max="5">개 (최대 5개)
+          </li>
+          <li>
+            <label><input type="checkbox" value="f_5"></label>
+            <input type="range" min="0" max="3" value="1">개 (최대 3개)
+          </li>
+        </ul>
+      </form>
+    </div>
+    <h1>날짜 지정하기</h1>
+    <input type="date">
+    <input type="month">
+    <input type="week">
+    <h1>시간 지정하기</h1>
+    <input type="time">
+    <input type="datetime-local">
+    <div>
+      <input type="submit" value="주문하기">
+      <input type="reset" value="취소하기">
+    </div>
+
+    <!--
+      파일 첨부
+    -->
+    <input type="file">
+
+    <!--
+      자동 입력 커서
+      힌트 표시
+    -->
+    <fieldset>
+      <div>
+        <label for="user-name">이름</label>
+        <input type="text" id="user-name" autofocus>
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone" placeholder="하이픈 빼고 입력해 주세요.(01012345678)">
+      </div>
+    </fieldset>
+    
+    <!--
+      읽기 전용 필드
+      필수 입력 필드
+    -->
+    <fieldset>
+      <legend>배송 정보</legend>
+      <ul id="shipping">
+        <li>
+          <label for="prod">주문 상품</label>
+          <input type="text" id="prod" value="상품용 3KG" readonly>
+        </li>
+        <li>
+          <label for="user-name">이름</label>
+          <input type="text" id="user-name" autofocus required>
+        </li>
+        <li>
+          <label for="addr">배송 주소</label>
+          <input type="text" id="addr" required>
+        </li>
+        <li>
+          <label for="mail">이메일</label>
+          <input type="email" id="mail">
+        </li>
+        <li>
+          <label for="phone">연락처</label>
+          <input type="tel" id="phone" placeholder="하이픈 빼고 입력해 주세요.(01012345678)" required>
+        </li>
+        <li>
+          <label for="d-day">배송 지정</label>
+          <input type="date" id="d-day"> <small>(주문일로부터 최소 3일 이후)</small>
+        </li>
+      </ul>
+    </fieldset>
+    <div>
+      <input type="submit" value="주문하기">
+      <input type="reset" value="취소하기">
+    </div>
+
+    <!--
+      회원가입 신청서에 속성 넣기
+    -->
+    <fieldset>
+      <legend>사용자 정보</legend>
+      <ul>
+        <li>
+          <label for="uid">아이디</label>
+          <input type="text" id="uid" autofocus placeholder="4자 ~ 10자 사이, 공백없이" required>
+        </li>
+        <li>
+          <label for="uamil">이메일</label>
+          <input type="email" id="umail" required>
+        </li>
+        <li>
+          <label for="pwd1">비밀번호</label>
+          <input type="password" id="pwd1" placeholder="문자와 숫자, 특수 기호 포함" required>
+        </li>
+        <li>
+          <label for="pwd2">비밀번호 확인</label>
+          <input type="password" id="pwd2" required>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>이벤트와 새로운 소식</legend>
+      <input type="radio" name="mailing" id="mailing_y">
+      <label for="mailing_y">메일 수신</label>
+      <input type="radio" name="mailing" id="mailing_n">
+      <label for="mailing_n">메일 수신 안 함</label>
+    </fieldset>
+  </body>
+</html>
