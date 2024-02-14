@@ -6,7 +6,7 @@ export type AvatarProps = DivProps & {
   size?: string
 }
 
-export const Avater: FC<AvatarProps> = ({
+export const Avatar: FC<AvatarProps> = ({
   className: _className, style, src, size, ...props
 }) => {
   const w_or_h = size ?? '3rem'
